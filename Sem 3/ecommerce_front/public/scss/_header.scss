@@ -1,0 +1,103 @@
+#header {
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+	background: $body-bg;
+	&.no-height {
+		height: auto;
+		min-height: auto;
+	}
+	.logo {
+		z-index: 3;
+		padding: 4rem 0;
+		img { 
+			width: 13em;
+		}
+	}
+	.account {
+		padding: 7rem 0 0 0;
+		z-index: 3;
+		.shopping {
+			border-left: 1px solid $red-dark-default;
+		}
+	}
+	.navbar {
+		min-height: 4em;
+		z-index: 1;
+		background: $red-default;
+		border: none;
+		.navbar-nav {
+			li {
+				a {
+					color: $white-default;
+					text-transform: uppercase;
+					font-weight: bold;
+					&:hover, &:active {
+						color: #000000
+					}
+				}
+			}
+		}
+	}
+
+	.carousel {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		min-height: 100%;
+		.carousel-inner {
+			height: 100%;
+			min-height: 100%;
+			.item {
+				height: 100%;
+				min-height: 100%;
+			}
+			.fill {
+				height: 100%;
+				min-height: 100%;				
+				background-size: cover;
+				background-position: center;
+			}
+
+			.carousel-caption {
+				bottom: 25%;
+				left: 15%;
+				right: 15%;
+				h2 {
+					color: rgb(111, 111, 111);
+					font-weight: bold;
+				}
+				p {
+					color: rgb(47, 47, 47);
+					font-size: 1.5em;
+					padding: 1em 0;
+				}
+			}
+		}
+		.carousel-control {
+			&.left {
+				background: none;
+				i {
+					position: absolute;
+					top: 50%;
+					z-index: 5;
+					display: inline-block;
+					font-size: 4em;
+				}
+			}
+			&.right {
+				background: none;
+				i {
+					position: absolute;
+					top: 50%;
+					z-index: 5;
+					display: inline-block;
+					font-size: 4em;
+				}
+			}
+		}
+	}
+}
