@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700");
+html {
+  height: 100%;
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  height: 100%;
+  min-height: 100%;
+  background: #fefefe;
+  font-family: "Montserrat", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif; }
+
+.btn-red-default {
+  background-color: #FE2740;
+  color: #f1f1f1; }
+  .btn-red-default:hover, .btn-red-default:active {
+    background-color: #ed283b;
+    color: #f1f1f1;
+    transition: .3s all; }
+
+.btn-red-dark-default {
+  background-color: #ed283b;
+  color: #f1f1f1; }
+  .btn-red-dark-default:hover, .btn-red-dark-default:active {
+    background-color: #FE2740;
+    color: #f1f1f1;
+    transition: .3s all; }
+
+.form-control:focus, .form-control:active, .form-control:hover {
+  box-shadow: none;
+  border-color: #292929; }
+
+.upper {
+  text-transform: uppercase !important; }
+
+.block {
+  display: block; }
+
+.title {
+  font-size: 1.5em; }
+
+.subtitle {
+  padding: 0 0 1em 0;
+  display: block; }
+
+.bold {
+  font-weight: bold; }
+
+#header {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  background: #fefefe; }
+  #header.no-height {
+    height: auto;
+    min-height: auto; }
+  #header .logo {
+    z-index: 3;
+    padding: 4rem 0; }
+    #header .logo img {
+      width: 13em; }
+  #header .account {
+    padding: 7rem 0 0 0;
+    z-index: 3; }
+    #header .account .shopping {
+      border-left: 1px solid #ed283b; }
+  #header .navbar {
+    min-height: 4em;
+    z-index: 1;
+    background: #FE2740;
+    border: none; }
+    #header .navbar .navbar-nav li a {
+      color: #f1f1f1;
+      text-transform: uppercase;
+      font-weight: bold; }
+      #header .navbar .navbar-nav li a:hover, #header .navbar .navbar-nav li a:active {
+        color: #000000; }
+  #header .carousel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    min-height: 100%; }
+    #header .carousel .carousel-inner {
+      height: 100%;
+      min-height: 100%; }
+      #header .carousel .carousel-inner .item {
+        height: 100%;
+        min-height: 100%; }
+      #header .carousel .carousel-inner .fill {
+        height: 100%;
+        min-height: 100%;
+        background-size: cover;
+        background-position: center; }
+      #header .carousel .carousel-inner .carousel-caption {
+        bottom: 25%;
+        left: 15%;
+        right: 15%; }
+        #header .carousel .carousel-inner .carousel-caption h2 {
+          color: #6f6f6f;
+          font-weight: bold; }
+        #header .carousel .carousel-inner .carousel-caption p {
+          color: #2f2f2f;
+          font-size: 1.5em;
+          padding: 1em 0; }
+    #header .carousel .carousel-control.left {
+      background: none; }
+      #header .carousel .carousel-control.left i {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+        font-size: 4em; }
+    #header .carousel .carousel-control.right {
+      background: none; }
+      #header .carousel .carousel-control.right i {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+        font-size: 4em; }
+
+#footer {
+  padding: 4.5em 0;
+  background: #FE2740; }
+  #footer .img-logo img {
+    width: 15em;
+    display: inline; }
+  #footer .social {
+    padding: 1em 0; }
+    #footer .social p {
+      color: #f1f1f1;
+      font-size: 1.2em; }
+    #footer .social i {
+      font-size: 1.2em;
+      color: #f1f1f1;
+      margin: 0.3em 1.5em 0 1.5em; }
+    #footer .social .facebook {
+      font-size: 1.3em; }
+    #footer .social .whatsapp {
+      font-size: 1.3em; }
+    #footer .social .instagram {
+      font-size: 1.3em; }
+
+#products {
+  padding: 2em 0; }
+  #products .cat .list-group {
+    border-right: 1px solid #ececec; }
+    #products .cat .list-group .list-group-item {
+      border: 0;
+      border-top: 1px solid #ececec; }
+      #products .cat .list-group .list-group-item:first-child {
+        border: 0; }
+      #products .cat .list-group .list-group-item a {
+        color: #292929;
+        text-transform: capitalize; }
+        #products .cat .list-group .list-group-item a:hover, #products .cat .list-group .list-group-item a:active {
+          color: #ed283b;
+          text-decoration: none; }
+  #products .list_pro .product_item {
+    margin: 1.3em 0; }
+    #products .list_pro .product_item .preview {
+      position: relative; }
+      #products .list_pro .product_item .preview img {
+        min-height: 13em;
+        max-height: 13em; }
+    #products .list_pro .product_item .info {
+      text-align: center;
+      border: 1px solid #ececec;
+      padding: 1em; }
+      #products .list_pro .product_item .info .price {
+        position: relative; }
+        #products .list_pro .product_item .info .price strong {
+          display: block;
+          padding: 1em 0; }
+
+#line {
+  position: relative;
+  width: 100%;
+  height: 8em;
+  background: #ed283b; }
+
+#steps {
+  text-align: center;
+  padding: 2em 0; }
+  #steps .title {
+    padding: 0 0 1em 0; }
+  #steps .step i {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    font-size: 2.5em;
+    color: #f1f1f1;
+    padding: 1em; }
+    #steps .step i.one {
+      background: #ed283b; }
+    #steps .step i.two {
+      background: #02874b; }
+    #steps .step i.three {
+      background: #209c9b; }
+  #steps .step h4 {
+    color: #292929;
+    padding: 0.5em 0; }
+  #steps .step p {
+    color: #333333; }
+
+#product-details .img-preview img {
+  width: 38em;
+  height: 23em;
+  max-height: 23em; }
+
+#product-details .product-info {
+  margin: 2em 0; }
+  #product-details .product-info h1 {
+    padding: 0; }
+  #product-details .product-info .pay-info p {
+    display: inline-block;
+    padding: 1em 0; }
+    #product-details .product-info .pay-info p strong {
+      font-size: 3em;
+      color: #ed283b; }
+  #product-details .product-info .other-info .list-group {
+    margin: 0 0 1em 0; }
+    #product-details .product-info .other-info .list-group .list-group-item {
+      border: none;
+      text-align: left;
+      padding: 0; }
+      #product-details .product-info .other-info .list-group .list-group-item label {
+        color: #292929; }
+      #product-details .product-info .other-info .list-group .list-group-item span {
+        color: #ed283b; }
+  #product-details .product-info .pay-action .btn-add-cart {
+    padding: 12px 12px; }
+
+#product-details .description {
+  margin: 3em 0; }

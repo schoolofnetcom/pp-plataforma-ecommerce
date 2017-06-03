@@ -1,0 +1,19 @@
+<div class="box-body">
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input type="text" name="name" class="form-control" placeholder="Enter you category name" value="<%= category.name %>">
+	</div>
+	<div class="form-group">
+		<label for="description">Description</label>
+		<input type="text" name="desc" class="form-control" placeholder="Enter you category description" value="<%= category.desc %>">
+	</div>
+	<div class="form-group">
+		<label for="">Enable?</label>
+		<input type="checkbox" name="enable" value="<%= category.enable %>" checked="<%= checked(category.enable)%>">
+	</div>
+</div>
+
+<div class="box-footer">
+	<button type="submit" class="btn btn-primary">Save</button>
+	<a href="/category"   class="btn btn-default">Back</a>	
+</div>

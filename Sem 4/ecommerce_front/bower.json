@@ -1,0 +1,28 @@
+{
+  "name": "ecommerce_front",
+  "description": "ecommerce based node.js",
+  "main": "app.js",
+  "authors": [
+    "Leonan Luppi <School of net>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ecommerce",
+    "node.js",
+    "mongodb",
+    "ejs"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
