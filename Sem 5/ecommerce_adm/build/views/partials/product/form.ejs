@@ -1,0 +1,49 @@
+<div class="box-body">
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input type="text" name="name" class="form-control" placeholder="Enter you product name" value="<%= product.name %>">
+	</div>
+	<div class="form-group">
+		<label for="image">Image</label>
+		<input type="file" name="images3" class="form-control">
+	</div>
+	<div class="form-group">
+		<label for="description">Description</label>
+		<input type="text" name="desc" class="form-control" placeholder="Enter you product description" value="<%= product.desc %>">
+	</div>
+	<div class="form-group">
+		<label for="sales_price">Sales price</label>
+		<div class="input-group">
+			<span class="input-group-addon">R$</span>
+			<input type="number" step="0.01" name="sales_price" class="form-control" placeholder="Enter your sales price product" value="<%= product.sales_price %>">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="discount">Discount</label>
+		<div class="input-group">
+			<input type="number" step="0.01" name="discount" class="form-control" placeholder="Enter your discount product" value="<%= product.discount %>">
+			<span class="input-group-addon">%</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="quantity">Quantity</label>
+		<input type="number" step="0.01" name="quantity" class="form-control" placeholder="Enter your quantity" value="<%= product.quantity %>">
+	</div>
+	<div class="form-group">
+		<label for="category">Category</label>
+		<select name="category" class="form-control">
+			<% for (var i = 0; i < categories.length; i++) { %>
+				<option value="<%= categories[i]._id %>" <%= selected(categories[i]._id, product.category._id) %>><%= categories[i].name %></option>
+			<% } %>
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="">Enable?</label>
+		<input type="checkbox" name="enable" value="<%= product.enable %>" checked="<%= checked(product.enable)%>">
+	</div>
+</div>
+
+<div class="box-footer">
+	<button type="submit" class="btn btn-primary">Save</button>
+	<a href="/product"   class="btn btn-default">Back</a>	
+</div>

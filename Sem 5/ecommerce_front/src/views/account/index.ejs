@@ -1,0 +1,32 @@
+<%- contentFor('body') %>
+<section id="account">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<h4 class="title upper bold">Register now</h4>
+				<span class="subtitle">Create now your account</span>
+				<a href="/account/new" class="btn btn-red-default">Create now</a>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<h4 class="title upper bold">Log in account</h4>
+				<span class="subtitle">Log in account</span>
+				<form action="/account/login" method="POST">
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" name="email" class="form-control" placeholder="Enter your email address">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" name="password" class="form-control" placeholder="Enter your secret password">
+					</div>
+					<div class="form-group">
+						<a href="#">Forget your password?</a>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-red-dark-default">Log in</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

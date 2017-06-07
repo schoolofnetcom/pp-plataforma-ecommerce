@@ -1,0 +1,27 @@
+<section class="content-header">
+	<h1>
+		User
+		<small>Edit</small>
+	</h1>
+
+	<ol class="breadcrumb">
+		<li><a href="/"><i class="fa fa-dashboard"></i></a></li>
+		<li class="active">User Edit</li>
+	</ol>
+</section>
+
+<section class="content">
+	<div class="row">	
+		<div class="col-xs-12">
+			<div class="box box-primary">
+				<div class="col-xs-12">
+					<h4 class="box-title">Edit a User</h4>
+				</div>
+
+				<form action="/user/<%= data._id %>?_method=PUT" method="POST" role="form">
+					<% include ./../partials/user/form %>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

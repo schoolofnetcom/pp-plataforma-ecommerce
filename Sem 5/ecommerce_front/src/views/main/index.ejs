@@ -1,0 +1,61 @@
+<%- contentFor('body') %>
+<section id="products">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-3 col-lg-3 cat">
+				<h4 class="title upper bold">Category</h4>
+				<ul class="list-group">
+					<% for (var i = 0; i < categories_menu.length; i++) {%>
+						<li class="list-group-item">
+							<a href="/category/<%= categories_menu[i].slug %>"><%= categories_menu[i].name %></a>
+						</li>
+					<% } %>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-9 col-lg-9 list_pro">
+				<h4 class="title upper bold">Best sellers</h4>
+				<div class="row">
+					<% for (var i = 0; i < products.length; i++) {%>
+						<div class="col-xs-12 col-md-4 product_item">
+							<div class="preview">
+								<img src="<%= products[i].image %>" class="img-responsive"  alt="">
+							</div>
+							<div class="info">
+								<a href="/product/<%= products[i].slug %>"><%= products[i].name %></a>
+								<div class="price">
+									<strong>R$ <%= products[i].sales_price %></strong>
+									<a href="/product/<%= products[i].slug %>" class="btn btn-red-default">See more</a>
+								</div>
+							</div>
+						</div>
+					<% } %>														
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="line"></section>
+
+<section id="steps">
+	<div class="container">
+		<div class="row">
+			<h4 class="title upper bold">Why ? </h4>
+			<div class="col-xs-12 col-md-4 step">
+				<i class="fa fa-list one"></i>
+				<h4 class="upper bold">Title</h4>
+				<p>Text</p>
+			</div>
+			<div class="col-xs-12 col-md-4 step">
+				<i class="fa fa-truck two"></i>
+				<h4 class="upper bold">Title</h4>
+				<p>Text</p>
+			</div>
+			<div class="col-xs-12 col-md-4 step">
+				<i class="fa fa-heart three"></i>
+				<h4 class="upper bold">Title</h4>
+				<p>Text</p>
+			</div>
+		</div>
+	</div>
+</section>

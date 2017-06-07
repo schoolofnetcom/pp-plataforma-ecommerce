@@ -1,0 +1,53 @@
+<%- contentFor('body') %>
+<section id="products">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12 list_pro">
+				<h4 class="title upper bold">Products</h4>
+				<hr />
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th>Product</th>
+										<th>Value</th>
+										<th>Qauntity</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+								<% for (var i = 0; i < cart.products.length; i++) { %>
+									<tr>
+										<td><%= cart.products[i].product.name %></td>
+										<td>R$ <%= cart.products[i].product.sales_price %></td>
+										<td><%= cart.products[i].quantity %></td>
+										<td>
+											<form action="/cart/<%= cart._id %>?product_id=<%= cart.products[i]._id %>&_method=DELETE" method="POST" class="inline">
+												<button type="submit" class="btn btn-danger btn-small">
+													<i class="fa fa-trash"></i>
+												</button>
+											</form>
+										</td>
+									</tr>
+								<% } %>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<h4>Total amount - R$ <%= cart.total %></h4>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<form action="/order" method="POST" class="inline">
+								<input type="hidden" name="cart_id" value="<%= cart._id %>">
+								<input type="hidden" name="total" value="<%= cart.total %>">
+								<button type="submit" class="btn btn-red-default upper">Finish Order</button>
+							</form>
+						</div>
+					</div>														
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

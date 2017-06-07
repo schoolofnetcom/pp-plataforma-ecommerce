@@ -1,0 +1,45 @@
+<section id="product-details">
+	<div class="container">	
+		<div class="row">
+			<div class="col-xs-12 col-md-6 img-preview">
+				<img src="<%= product.image %>" alt="" class="img-responsive">
+			</div>
+			<div class="col-xs-12 col-md-6 product-info">
+				<h1 class="upper"><%= product.name %></h1>
+				<div class="pay-info">
+					<p>
+						<strong>R$ <%= product.sales_price %></strong>
+					</p>
+				</div>
+				<div class="other-info">
+					<ul class="list-group">
+						<li class="list-group-item">	
+							<label for="">Out of stock:</label>
+							<% if (product.enable) { %>
+								<span class="label label-success">Yes</span>
+							<% } else { %>
+								<span class="label label-warning">No</span>
+							<% } %>							
+						</li>
+					</ul>
+				</div>
+				<div class="pay-action">
+					<form action="/cart" method="POST">
+						<input type="hidden" name="product_id" value="<%= product._id %>" >
+						<input type="hidden" name="product_slug" value="<%= product.slug %>" >
+						<button class="btn btn-block btn-red-default upper btn-add-cart">Add to cart</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 description">
+				<h4 class="title upper">Details</h4>
+				<hr>
+				<p>
+					<%= product.desc %>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

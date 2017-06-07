@@ -1,0 +1,19 @@
+<%- contentFor('body') %>
+<section class="login-box">
+	<div class="login-box-body">
+		<p class="login-box-msg">Enter your email and password</p>
+		<form action="/auth" method="POST">
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" name="email"  class="form-control" placeholder="Enter your email" >
+			</div> 
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" name="password"  class="form-control" placeholder="Enter your password" >
+			</div> 
+			<div class="form-group">
+				<button type="submit" class="btn btn-block btn-primary">Login</button>
+			</div>
+		</form>
+	</div>
+</section>

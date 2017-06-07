@@ -1,0 +1,33 @@
+#steps {
+	text-align: center;
+	padding: 2em 0;
+	.title {
+		padding: 0 0 1em 0;
+	}
+	.step {
+		i {
+			width: 3em;
+    		height: 3em;
+    		border-radius: 50%;
+    		font-size: 2.5em;
+			color: $white-default;
+			padding: 1em;
+			&.one {
+				background: $red-dark-default
+			}
+			&.two {
+				background: #02874b;
+			}
+			&.three {
+				background: #209c9b;
+			}
+		}
+		h4 {
+			color: $font-color-default;
+			padding: 0.5em 0;
+		}
+		p {
+			color: #333333;
+		}
+	}
+}

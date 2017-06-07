@@ -1,0 +1,68 @@
+<section class="content-header">
+	<h1>
+		Category
+		<small>List</small>
+	</h1>
+
+	<ol class="breadcrumb">
+		<li><a href="/"><i class="fa fa-dashboard"></i></a></li>
+		<li class="active">Category List</li>
+	</ol>
+</section>
+
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box box-primary">
+				<div class="box-header">
+					<h3>Listing</h3>
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="/category/new" class="btn btn-success">New</a>
+						</div>
+					</div>
+				</div>
+				<div class="box-body">	
+					<div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Enable</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<% for (var i = 0; i < categories.length; i++) { %>
+									<tr>
+										<td><%= categories[i].name %></td>
+										<td><%= categories[i].desc %></td>
+										<td>
+											<% if (categories[i].enable) { %>
+												<span class="label label-success">Enable</span>
+											<% } else { %>
+												<span class="label label-warning">Disable</span>
+											<% } %>
+										</td>
+										<td>
+											<a href="/category/<%= categories[i]._id %>" class="btn btn-default btn-small">
+												<i class="fa fa-eye"></i>
+											</a>
+
+											<form action="/category/<%= categories[i]._id %>?_method=DELETE" method="POST" class="inline">
+												<button type="submit" class="btn btn-danger btn-small">
+													<i class="fa fa-trash"></i>
+												</button>
+											</form>
+										</td>
+									</tr>
+								<% } %>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
